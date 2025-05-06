@@ -8,11 +8,12 @@ while (true) {
 
     if (input === "new") {
         let row = prompt("Input the row to access");
-        while (parseInt(row) > board.length - 1 || row.trim() === "") {
+
+        while (parseInt(row) > board.length - 1 || row.trim() === "" || parseInt(row) < 0) {
             row = prompt("Please input your row choice with respects to the borders")
         }
         let column = prompt("Now please enter the column to access");
-        while (parseInt(column) > board.length - 1 || column.trim() === "") {
+        while (parseInt(column) > board.length - 1 || column.trim() === "" || parseInt(column) < 0) {
             column = prompt("Please input your column choice with respects to the borders")
         }
         let newValue = prompt("Now enter what you would like to input in that column");
